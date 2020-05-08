@@ -18,7 +18,7 @@ from typing import cast, Dict, Optional
 from looker_sdk import models
 
 #API credentials here to access Looker
-sdk = looker_sdk.init31("/Users/alanleung/Projects/looker_projects/looker.ini")
+sdk = looker_sdk.init31(".../looker.ini")
 
 """
 Generate a dataframe of user_ids, names, emails, and list of campaign ids
@@ -36,7 +36,7 @@ user_id = [
 def file_gen():
     for k in user_id:
         #Creates a directory with the user_id so that we can identify who gets which reports.
-        os.mkdir("/Users/alanleung/Desktop/campaign_performance/" + k)
+        os.mkdir("~/Desktop/campaign_performance/" + k)
 
         #Placeholder list for a dynamically generated list of campaigns per user.
         campaign_id = [
@@ -78,7 +78,7 @@ def file_gen():
                 print(f"Render task completed in {elapsed} seconds")
 
                 result = sdk.render_task_results(task.id)
-                filename = "/Users/alanleung/Desktop/campaign_performance/" + k + "/" + i + "_file.pdf"
+                filename = "~/Desktop/campaign_performance/" + k + "/" + i + "_file.pdf"
                 with open(filename, "wb") as f:
                     f.write(result)
                 print(f'Dashboard pdf saved as "{filename}"')
