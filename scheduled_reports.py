@@ -9,6 +9,7 @@ import sys
 import textwrap
 import time
 import os
+import shutil
 import email, smtplib, ssl
 import looker_sdk
 
@@ -150,5 +151,8 @@ for user in user_id:
             server.sendmail(sender_email, receiver_email, text)
 
     email_gen()
+
+#Removes the directory for cleanliness (which I've heard is next to godliness, but I could be mistaken.)
+shutil.rmtree(directory)
 
 print("Done!")
