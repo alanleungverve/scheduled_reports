@@ -93,6 +93,7 @@ def file_gen():
 
             get_pdf()
 file_gen()
+print("PDFs generated.")
 
 #Function to group attachments into one email per user.
 
@@ -151,8 +152,10 @@ for user in user_id:
             server.sendmail(sender_email, receiver_email, text)
 
     email_gen()
+print("Emails generated.")
 
 #Removes the directory for cleanliness (which I've heard is next to godliness, but I could be mistaken.)
 shutil.rmtree(directory)
+print("Directory removed.")
 
 print("Done!")
