@@ -1,4 +1,6 @@
 ### Looker API resources: https://github.com/looker-open-source/sdk-codegen ###
+#Notes: To send out emails from your Google account using this script, you will need to enable Insecure Apps.
+#Otherwise the script will fail.
 
 #Import dump
 import json
