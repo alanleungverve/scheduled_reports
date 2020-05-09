@@ -27,7 +27,10 @@ except:
 os.mkdir("/Users/alanleung/Desktop/campaign_performance")
 directory = "/Users/alanleung/Desktop/campaign_performance/"
 
-#Generate dataframes. test.csv format is user_id (int) | user_email (str) | campaign_id (list)
+#Generate dataframes. 
+#test.csv is a csv file that provides the user_id, user_email, and campaign_id.
+#Currently, it assumes a fan out on campaign_id - there is list aggregation/deaggregation in the script.
+#test.csv format is user_id (int) | user_email (str) | campaign_id (str)
 df = pd.read_csv("/Users/alanleung/Desktop/test.csv")
 df2 = df.groupby('user_id')['campaign_id'].apply(list).reset_index(name='campaign_id')
 
