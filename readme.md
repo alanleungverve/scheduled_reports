@@ -15,3 +15,8 @@ a PDF report per stakeholder for 350 stakeholders. We may want to investigate de
 from a local machine and instead host it on a cloud instance. Second, if a stakeholder is a member 
 of many campaigns, the email may exceed Gmail's email size limits. One potential solution is 
 that we upload the PDFs to a Google Drive folder and email out a shared link instead.
+
+## General Notes
+
+This script was built using values from my local machine - please thoroughly cleanse it if you
+will be using it on a cloud instance or another local machine.
