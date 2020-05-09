@@ -1,4 +1,4 @@
-__Solution Overview__
+## Solution Overview
 
 Currently, Looker produces one email per PDF when generating a report on campaign performance.
 This is not acceptable when external stakeholders are members of multiple campaigns. The
@@ -6,7 +6,7 @@ scheduled reports script will try to remedy this by downloading all PDFs on a pe
 basis, storing it locally, aggregating them into one email, sending out the email, and then 
 removing the directory when the script finishes running.
 
-__Solution Limitations__
+## Solution Limitations
 
 There are certain limitations to this solution. First, it will take some time to run due to the
 serial nature of the API calls - we can only generate 1 PDF at a time. Given that it takes 15 
